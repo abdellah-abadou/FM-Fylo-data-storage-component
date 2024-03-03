@@ -1,0 +1,215 @@
+*  {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --Pale-Blue: hsl(243, 100%, 93%);
+    --Grayish-Blue: hsl(229, 7%, 55%);
+    --Dark-Blue: hsl(228, 56%, 26%);
+    --Very-Dark-Blue: hsl(229, 57%, 11%);
+    --Very-Dark-Blue-opacity-0-5: hsla(229, 57%, 11%, 0.493);
+    --Gradient1: hsl(6, 100%, 80%);
+    --Gradient2: hsl(335, 100%, 65%);
+}
+
+body {
+    font-size: 14px;
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Very-Dark-Blue);
+    font-family: "Raleway", sans-serif;
+    /* position: relative; */ 
+}
+
+.background {
+    width: 100%;
+    height: 100%;
+    background-image: url(background/bg-desktop.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    position: absolute;
+}
+
+main {
+    width: 64.2%;
+    height: 25%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 1.5%;
+}
+
+.logo-icon-container {
+    position: relative;
+    width: 38%;
+    height: 100%;
+    background-color: var(--Dark-Blue);
+    border-radius: 10px 100px 10px 10px;
+    box-shadow: -50px 80px 80px 10px rgba(0, 0, 0, 0.2);
+}
+
+.logo-container {
+    position: absolute;
+    top: 19%;
+    left: 12%;
+}
+
+.logo-icon-container div {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--Dark-Blue);
+    bottom: 21%;
+    left: 6%;
+}
+
+.logo-icon-container div figure {
+    margin-left: 14%;
+    background-color: var(--Very-Dark-Blue);
+    padding: 12px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+}
+
+/* storage-container */
+
+.storage-container {
+    position: relative;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: var(--Dark-Blue);
+    color: var(--Grayish-Blue);
+    border-radius: 10px;
+    width: 58.5%;
+    height: 76%;
+    box-shadow: 50px 80px 80px 10px rgba(0, 0, 0, 0.2);
+}
+
+.left-storage {
+    position: relative;
+    position: absolute;
+    background-color: white;
+    width: 33%;
+    height: 48%;
+    border-radius: 10px 10px 0px 10px;
+    right: 8%;
+    top: -31%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.left-storage p {
+    z-index: 2;
+    
+    font-size: 3em;
+    font-weight: 700;
+    color: var(--Very-Dark-Blue);
+}
+
+.tringle {
+    width: 0;
+    height: 0;
+    border-top: 70px solid white;
+    border-left: 65px solid transparent;
+    position: absolute;
+    bottom: -30%;
+    right: 0;
+    z-index: 1;
+}
+
+.left-storage p span {
+    color: var(--Grayish-Blue);
+    font-size: 0.28em;
+    vertical-align: 0.9em;
+    letter-spacing: 0.1em;
+}
+
+.storage-container h2 {
+    margin: 40px 0px 0px 40px;
+    font-size: 1.0em;
+}
+
+.storage-container h2 span {
+    color: var(--Pale-Blue);
+}
+
+
+/* progress bar */
+
+.progress-bar {
+    width: 85%;
+    height: 12%;
+    background-color: var(--Very-Dark-Blue-opacity-0-5);
+    border-radius: 10px;
+    margin: 16px 0px 0px 40px;
+    display: flex;
+    align-items: center;
+}
+
+.progress {
+    border-radius: 10px;
+    width: 74%;
+    height: 65%;
+    background-image: linear-gradient(90deg,var(--Gradient1),var(--Gradient2));
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.progress div {
+    height: 80%;
+    width: 3%;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    right: 0.5%;
+}
+
+.progress-info {
+    width: 85%;
+    margin: 8px 0px 0px 40px;
+    display: flex;
+    justify-content: space-between;
+    color: var(--Pale-Blue);
+    font-weight: 400;
+    font-size: 0.8em;
+}
+
+@media only screen and (max-width: 1000px) {
+    main {
+        width: 70%;
+        height: 60%;
+    }
+    
+    .logo-icon-container {
+        width: 100%;
+        height: 40%;
+        top: 0;
+    }
+
+    .storage-container {
+        width: 100%;
+        height: 35%;
+        bottom: 0;
+    }
+
+    .logo-icon-container div {
+       left: 50%;
+       bottom: 35%;
+    }
+    
+    .logo-container {
+       top: 40%;
+    }
+
+}
